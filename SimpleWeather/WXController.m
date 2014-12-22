@@ -7,6 +7,7 @@
 //
 
 #import "WXController.h"
+#import <LBBlurredImage/UIImageView+LBBlurredImage.h>
 
 @interface WXController ()
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -28,6 +29,14 @@
     self.backgroundImageView = [[UIImageView alloc] initWithImage:background];
     self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:self.backgroundImageView];
+
+    // Create a blurred background image using LBBlurredImage, and set the
+    // alpha to 0 initially so that backgroundImageView is visible at first.
+    self.blurredImageView = [[UIImageView alloc] init];
+    self.blurredImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.blurredImageView.alpha = 0;
+    [self.blurredImageView setImageToBlur:background blurRadius:10 completionBlock:nil];
+    [self.view addSubview:self.blurredImageView];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
