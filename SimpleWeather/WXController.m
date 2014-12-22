@@ -9,7 +9,10 @@
 #import "WXController.h"
 
 @interface WXController ()
-
+@property (nonatomic, strong) UIImageView *backgroundImageView;
+@property (nonatomic, strong) UIImageView *blurredImageView;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) CGFloat screenHeight;
 @end
 
 @implementation WXController
