@@ -37,6 +37,18 @@
     self.blurredImageView.alpha = 0;
     [self.blurredImageView setImageToBlur:background blurRadius:10 completionBlock:nil];
     [self.view addSubview:self.blurredImageView];
+
+    // Create a tableview that will handle all the data presentation.
+    // WXController will be the delegate and data source, as well as the
+    // scroll view delegate. Note that you’re also setting pagingEnabled to
+    // YES.
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
+    self.tableView.pagingEnabled = YES;
+    [self.view addSubview:self.tableView];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
