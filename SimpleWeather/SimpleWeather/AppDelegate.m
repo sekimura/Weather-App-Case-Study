@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "WXController.h"
+#import <TSMessage.h>
 
 @interface AppDelegate ()
 
