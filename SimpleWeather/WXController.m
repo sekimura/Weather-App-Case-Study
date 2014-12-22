@@ -19,8 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Remove this later
-    self.view.backgroundColor = [UIColor redColor];
+    // Get and store the screen height. You’ll need this later when displaying
+    // all of the weather data in a paged manner.
+    self.screenHeight = [UIScreen mainScreen].bounds.size.height;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
