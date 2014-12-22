@@ -89,7 +89,13 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
   }
 
-  // TODO: Tweak cell stile a bit
+  // Forecast cells shouldn’t be selectable. Give them a semi-transparent
+  // black background and white text.
+  cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+  cell.textLabel.textColor = [UIColor whiteColor];
+  cell.detailTextLabel.textColor = [UIColor whiteColor];
+
   // TODO: Setup the cell
 
   return cell;
