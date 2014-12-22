@@ -70,4 +70,36 @@
 }
 */
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  // TODO: Return count of forecast
+  return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *cellId = @"CellId";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+
+  if (! cell) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
+  }
+
+  // TODO: Tweak cell stile a bit
+  // TODO: Setup the cell
+
+  return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+  // TODO: Determine cell height based on screen
+  return 44;
+}
+
 @end
