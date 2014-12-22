@@ -49,6 +49,44 @@
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
     self.tableView.pagingEnabled = YES;
     [self.view addSubview:self.tableView];
+
+  // Set the header of your table to be the same size of your screen.
+  // You’ll be taking advantage of UITableView’s paging which will page
+  // the header and the daily and hourly forecast sections.
+  CGRect headerFrame = [UIScreen mainScreen].bounds;
+
+  // Create an inset (or padding) variable so that all your labels are
+  // evenly spaced and centered
+  CGFloat inset = 20;
+
+  // Create and initialize the height variables for your various views.
+  // Setting these values as constants makes it easy to configure and
+  // changing your view setup if required.
+  CGFloat temperatureHeight = 110;
+  CGFloat hiloHeight = 40;
+  CGFloat iconHeight = 30;
+
+  // Create frames for your labels and icon view based on the constant
+  // and inset variables.
+  CGRect hiloFrame = CGRectMake(inset,
+                                headerFrame.size.height - hiloHeight,
+                                headerFrame.size.width - (2 * inset),
+                                hiloHeight);
+  CGRect temperatureFrame = CGRectMake(inset,
+                                       headerFrame.size.height - (temperatureHeight + hiloHeight),
+                                       headerFrame.size.width - (2 * inset),
+                                       temperatureHeight);
+  CGRect iconFrame = CGRectMake(inset,
+                                temperatureFrame.origin.y - iconHeight,
+                                iconHeight,
+                                iconHeight);
+
+  // Copy the icon frame, adjust it so the text has some room to expand,
+  // and move it to the right of the icon. You’ll see how this layout
+  // math works once we add the label to the view below.
+  CGRect conditionsFrame = iconFrame;
+  conditionsFrame.size.width = self.view.bounds.size.width - (((2 * inset) + iconHeight) + 10);
+  conditionsFrame.origin.x = iconFrame.origin.x + (iconHeight + 10);
 }
 
 - (void)viewWillLayoutSubviews {
