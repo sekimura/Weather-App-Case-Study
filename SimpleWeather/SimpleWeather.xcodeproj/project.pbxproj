@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		44ADF00F1A479A0E00EC6348 /* WXController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ADF00E1A479A0E00EC6348 /* WXController.m */; };
+		44ADF0121A47B44F00EC6348 /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ADF0111A47B44F00EC6348 /* WXClient.m */; };
+		44ADF0151A47B45E00EC6348 /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ADF0141A47B45E00EC6348 /* WXManager.m */; };
+		44ADF0181A47B47500EC6348 /* WXCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ADF0171A47B47500EC6348 /* WXCondition.m */; };
+		44ADF01B1A47B48700EC6348 /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ADF01A1A47B48700EC6348 /* WXDailyForecast.m */; };
 		44E4FBD41A47976300E42889 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E4FBD31A47976300E42889 /* main.m */; };
 		44E4FBD71A47976300E42889 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E4FBD61A47976300E42889 /* AppDelegate.m */; };
 		44E4FBD91A47976300E42889 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E4FBD81A47976300E42889 /* Images.xcassets */; };
@@ -29,6 +33,14 @@
 /* Begin PBXFileReference section */
 		44ADF00D1A479A0E00EC6348 /* WXController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXController.h; sourceTree = "<group>"; };
 		44ADF00E1A479A0E00EC6348 /* WXController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXController.m; sourceTree = "<group>"; };
+		44ADF0101A47B44F00EC6348 /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXClient.h; sourceTree = "<group>"; };
+		44ADF0111A47B44F00EC6348 /* WXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXClient.m; sourceTree = "<group>"; };
+		44ADF0131A47B45E00EC6348 /* WXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXManager.h; sourceTree = "<group>"; };
+		44ADF0141A47B45E00EC6348 /* WXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXManager.m; sourceTree = "<group>"; };
+		44ADF0161A47B47500EC6348 /* WXCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCondition.h; sourceTree = "<group>"; };
+		44ADF0171A47B47500EC6348 /* WXCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCondition.m; sourceTree = "<group>"; };
+		44ADF0191A47B48700EC6348 /* WXDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDailyForecast.h; sourceTree = "<group>"; };
+		44ADF01A1A47B48700EC6348 /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDailyForecast.m; sourceTree = "<group>"; };
 		44E4FBCE1A47976300E42889 /* SimpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E4FBD21A47976300E42889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E4FBD31A47976300E42889 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +80,14 @@
 			children = (
 				44ADF00D1A479A0E00EC6348 /* WXController.h */,
 				44ADF00E1A479A0E00EC6348 /* WXController.m */,
+				44ADF0101A47B44F00EC6348 /* WXClient.h */,
+				44ADF0111A47B44F00EC6348 /* WXClient.m */,
+				44ADF0131A47B45E00EC6348 /* WXManager.h */,
+				44ADF0141A47B45E00EC6348 /* WXManager.m */,
+				44ADF0161A47B47500EC6348 /* WXCondition.h */,
+				44ADF0171A47B47500EC6348 /* WXCondition.m */,
+				44ADF0191A47B48700EC6348 /* WXDailyForecast.h */,
+				44ADF01A1A47B48700EC6348 /* WXDailyForecast.m */,
 				44E4FBD01A47976300E42889 /* SimpleWeather */,
 				44E4FBE41A47976300E42889 /* SimpleWeatherTests */,
 				44E4FBCF1A47976300E42889 /* Products */,
@@ -274,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ADF0151A47B45E00EC6348 /* WXManager.m in Sources */,
+				44ADF01B1A47B48700EC6348 /* WXDailyForecast.m in Sources */,
 				44E4FBD71A47976300E42889 /* AppDelegate.m in Sources */,
 				44E4FBD41A47976300E42889 /* main.m in Sources */,
 				44ADF00F1A479A0E00EC6348 /* WXController.m in Sources */,
+				44ADF0181A47B47500EC6348 /* WXCondition.m in Sources */,
+				44ADF0121A47B44F00EC6348 /* WXClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
