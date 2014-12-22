@@ -22,6 +22,12 @@
     // Get and store the screen height. You’ll need this later when displaying
     // all of the weather data in a paged manner.
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
+
+    // Create a static image background and add it to the view.
+    UIImage *background = [UIImage imageNamed:@"bg"];
+    self.backgroundImageView = [[UIImageView alloc] initWithImage:background];
+    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:self.backgroundImageView];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
